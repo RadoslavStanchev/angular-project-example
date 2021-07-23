@@ -58,13 +58,14 @@ main {
 
 main {
   min-height: 91vh;
+  margin-top: 70px;
 }
 
 section div.container.home {
   padding-top: 0;
 }
 
-.home h1, .home p {
+.home h2, .home p {
   text-align: center;
   color: black;
 }
@@ -570,4 +571,17 @@ footer {
 
 footer {
   background-color: #76A2A2;
+}
+
+.hero-section {
+  color: black;
+}
+
+.hero-section .btn {
+  color: black;
+  border-color: black;
+}
+
+.hero-section .btn:hover {
+  background-color: white;
 }
