@@ -11,6 +11,7 @@ import { CreateOfferComponent } from './create-offer/create-offer.component';
 import { HotelDetailsComponent } from './hotel-details/hotel-details.component';
 import { HotelEditComponent } from './hotel-edit/hotel-edit.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProfileComponent } from './profile/profile.component';
     CreateOfferComponent,
     HotelDetailsComponent,
     HotelEditComponent,
-    ProfileComponent
+    ProfileComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,

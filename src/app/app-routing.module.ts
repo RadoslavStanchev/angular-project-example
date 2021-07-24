@@ -8,6 +8,7 @@ import { CreateOfferComponent } from './create-offer/create-offer.component';
 import { HotelDetailsComponent } from './hotel-details/hotel-details.component';
 import { HotelEditComponent } from './hotel-edit/hotel-edit.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'hotel-details', component: HotelDetailsComponent },
   { path: 'hotel-edit', component: HotelEditComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: 'error', component: ErrorPageComponent },
 ];
 
 @NgModule({
