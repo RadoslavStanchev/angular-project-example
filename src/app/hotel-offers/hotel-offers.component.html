@@ -1,32 +1,30 @@
-
     <main>
         <section class="container" id="shared-trips-page">
             <header class="trip">
-                <h1>Welcome Sharetripers!</h1>
-                <p class="lead">Sharedtrip is the best way to road across the country.</p>
-                <p class="lead">Find yours Sharedtrip's buddies, when you share with us yours trip plans and let the
-                    exploration begin!</p>
+                <h1>Welcome to the best hotel offers!</h1>
+                <p class="lead">Our services are the best way to find the perfect place to relax.</p>
             </header>
             <div class="row text-center">
                 <!-- If there are shared trips in the database display each of them -->
 
                 <!-- trip #1 -->
                
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4" *ngFor="let offer of offers | async">
                     <div class="card h-100">
                         <img class="card-img-top"
-                            src="carImage"
+                            src="{{offer.image}}"
                             alt="">
                         <div class="card-body">
-                            <h5 class="card-title"><i class="fas fa-route"></i> <span>startPoint</span> -
-                                <span>endPoint</span></h5>
-                            <h5 class="mt-4 card-info"><i class="far fa-calendar-alt"></i> Date: <span>date</span>
+                            <h5 class="mt-4 card-info"><i class="far fa-clock"></i> Name: <span>{{offer.name}}</span></h5>
+                            <h5 class="mt-4 card-info"><i class="fas fa-route"></i> <span>Destination</span> -
+                                <span>{{offer.destination}}</span></h5>
+                            <h5 class="mt-4 card-info"><i class="far fa-calendar-alt"></i> Date: <span>{{offer.date}}</span>
                             </h5>
-                            <h5 class="mt-4 card-info"><i class="far fa-clock"></i> Time: <span>time</span></h5>
-                            <h5 class="mt-4"><i class="fas fa-hand-holding-usd"></i> Price: <span>price</span> BGN</h5>
+                            <h5 class="mt-4 card-info"><i class="fas fa-hand-holding-usd"></i> Price: <span>{{offer.price}}</span> BGN</h5>
                         </div>
                         <div class="card-footer">
-                            <a href="/trip/_id/details" class="btn btn-primary">Details</a>
+                            <a href="/edit-offer/{{offer.id}}" class="btn btn-primary margin-right">Edit</a>
+                            <a (click)="deleteHotelOffer($event)" id="{{offer.id}}" class="btn btn-danger">Delete</a>
                         </div>
                     </div>
                 </div>

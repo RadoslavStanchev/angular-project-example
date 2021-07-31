@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HotelOffersComponent } from './hotel-offers/hotel-offers.component';
 import { CreateOfferComponent } from './create-offer/create-offer.component';
+import { EditOfferComponent } from './edit-offer/edit-offer.component';
 import { HotelDetailsComponent } from './hotel-details/hotel-details.component';
 import { HotelEditComponent } from './hotel-edit/hotel-edit.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -16,10 +17,11 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'hotel-offers', component: HotelOffersComponent },
   { path: 'create-offer', component: CreateOfferComponent },
+  { path: 'edit-offer/:id', component: EditOfferComponent },
   { path: 'hotel-details', component: HotelDetailsComponent },
   { path: 'hotel-edit', component: HotelEditComponent },
   { path: 'profile', component: ProfileComponent },
-  { path: 'error', component: ErrorPageComponent },
+  { path: '**', component: ErrorPageComponent },
 ];
 
 @NgModule({

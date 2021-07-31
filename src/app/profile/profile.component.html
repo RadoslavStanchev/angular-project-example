@@ -4,8 +4,8 @@
             <div class="profile-container">
                 <!-- Do not forget to change the path to the image -->
                 <!-- Gender of the user determines which picture is displayed as their avatar -->
-                <img class="profile-img" src="../../static/images/male.png">
-                <p>Email: <span>ng-bind="user.email"</span></p>
+                <img width="100%" height="100%" class="profile-img" [src]="getUserGender()==='male' ? '../assets/img/male.png' : '../assets/img/female.png'">
+                <p>Email: <span>{{getUserEmail()}}</span></p>
             </div>
             <div class="profile-info">
 

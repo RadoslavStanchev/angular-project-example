@@ -18,23 +18,26 @@
               </li>
 
               <!-- Logged users -->
-              <li class="nav-item">
-                  <a class="nav-link" routerLink="/create-offer" >Create Offer</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" routerLink="/profile">Profile</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link">Logout as [ user.email ]</a>
-              </li>
-
-              <!-- Guest users -->
-              <li class="nav-item">
-                  <a class="nav-link" routerLink="/login">Login</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" routerLink="/register" >Register</a>
-              </li>
+              <div class="container1" *ngIf="getIsUserLoggedIn(); else userLoggedOut">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/create-offer" >Create Offer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/profile">Profile</a>
+                </li>
+                <li class="nav-item" (click)="logout()">
+                    <a href="" class="nav-link">Logout as [ {{getUserEmail()}} ]</a>
+                </li>
+            </div>
+            <ng-template #userLoggedOut>
+                <!-- Guest users -->
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/register" >Register</a>
+                </li>
+            </ng-template>
 
           </ul>
       </div>

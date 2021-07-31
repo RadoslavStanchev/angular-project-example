@@ -12,6 +12,13 @@ import { HotelDetailsComponent } from './hotel-details/hotel-details.component';
 import { HotelEditComponent } from './hotel-edit/hotel-edit.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { FormsModule } from '@angular/forms';
+
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
+import { EditOfferComponent } from './edit-offer/edit-offer.component';
+
 
 @NgModule({
   declarations: [
@@ -24,11 +31,15 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     HotelDetailsComponent,
     HotelEditComponent,
     ProfileComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    EditOfferComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
